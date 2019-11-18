@@ -1,3 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hero Teams</title>
+</head>
+<body>
+        <h1>Team Name:</h1> <%= @team.name %>
+        <h2>Team Motto:</h2> <%= @team.motto %>
 
-
-
+                <h1>Heroes</h1>
+         <% @heroes.each do |hero| %>
+           <div class="hero">
+             <p>Hero Name: <%= hero.name %></p><br>
+             <p>Hero Power: <%= hero.power %></p><br>
+             <p>Hero Biography: <%= hero.bio %></p>
+           </div><br>
+         <% end %>
+</body>
+</html>
